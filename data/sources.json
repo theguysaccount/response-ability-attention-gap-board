@@ -173,8 +173,9 @@
   },
   "https://www.stoptb.org": {
    "checked": "2026-11-22",
-   "http": 403,
-   "status": "blocked"
+   "http": 0,
+   "since": "2026-11-22",
+   "status": "broken"
   },
   "https://www.theglobalfund.org": {
    "checked": "2026-11-22",
