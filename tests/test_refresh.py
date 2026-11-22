@@ -73,7 +73,8 @@ class Base(unittest.TestCase):
         for row in D.all_rows(self.causes):
             for a in row["articles"]:
                 self.net.views[a] = {m: 100 for m in months}
-        patches = [mock.patch.object(wiki, "fetch", self.net), mock.patch.object(R, "fetch", self.net),
+        patches = [mock.patch.dict(os.environ, {"GITHUB_ACTIONS": "", "GITHUB_STEP_SUMMARY": ""}),
+                   mock.patch.object(wiki, "fetch", self.net), mock.patch.object(R, "fetch", self.net),
                    mock.patch.object(wiki.time, "sleep", lambda s: None), mock.patch.object(R.time, "sleep", lambda s: None)]
         for p in patches:
             p.start()
@@ -184,6 +185,17 @@ class Sources(Base):
         second = R.Report()
         self.run_sources("2026-11-28", second)
         self.assertIn("link-broken:" + url, [a["key"] for a in second.alerts])
+
+    def test_a_dropped_connection_alerts_only_after_four_weeks(self):
+        url = self.causes["causes"][0]["orgs"][0]["url"]
+        self.net.pages[url] = (0, "")      # FakeNet reports error "unreachable": not a DNS failure
+        self.run_sources("2026-11-01")
+        week = R.Report()
+        self.run_sources("2026-11-08", week)
+        self.assertNotIn("link-broken:" + url, [a["key"] for a in week.alerts])
+        month = R.Report()
+        self.run_sources("2026-11-29", month)
+        self.assertIn("link-broken:" + url, [a["key"] for a in month.alerts])
 
     def test_bot_walls_are_not_broken(self):
         url = self.causes["causes"][0]["orgs"][0]["url"]

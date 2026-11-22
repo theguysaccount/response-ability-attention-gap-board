@@ -182,11 +182,18 @@ def link_urls(causes):
     return out
 
 
-def classify_link(status):
+DNS_FAILURE = ("name or service not known", "nodename nor servname", "no address associated", "getaddrinfo failed",
+               "temporary failure in name resolution")
+UNREACHABLE_ALERT_DAYS = 28   # some sites drop connections from cloud runners; only a long silence is news
+
+
+def classify_link(status, error=""):
     if 200 <= status < 400:
         return "ok"
     if status in BOT_WALLS:
         return "blocked"   # the site answers but refuses scripts; a person can still open it
+    if status == 0 and not any(m in (error or "").lower() for m in DNS_FAILURE):
+        return "unreachable"   # timeout or reset: often a firewall in front of runners, not a dead site
     return "broken"
 
 
@@ -238,11 +245,12 @@ def refresh_sources(report, today=None, data_dir=D.DATA, pause=SOURCE_PAUSE, lin
     for url in link_urls(causes):
         old = previous.get("links", {}).get(url, {})
         res = fetch(url, tries=2, accept="text/html,*/*;q=0.8", limit=200000)
-        status = classify_link(res.status)
+        status = classify_link(res.status, res.error)
         entry = {"http": res.status, "status": status, "checked": today}
-        if status == "broken":
-            entry["since"] = old.get("since") or today
-            if entry["since"] < today:   # broken on at least two separate days
+        if status in ("broken", "unreachable"):
+            entry["since"] = old.get("since") if old.get("status") in ("broken", "unreachable") and old.get("since") else today
+            days = (datetime.date.fromisoformat(today) - datetime.date.fromisoformat(entry["since"])).days
+            if (status == "broken" and days >= 1) or (status == "unreachable" and days >= UNREACHABLE_ALERT_DAYS):
                 report.alert("link-broken:" + url, "Link not answering: %s" % url,
                              "%s has failed since %s (%s). If the organisation moved, update the URL in "
                              "data/causes.json." % (url, entry["since"], res.error or "HTTP %s" % res.status))
@@ -254,10 +262,10 @@ def refresh_sources(report, today=None, data_dir=D.DATA, pause=SOURCE_PAUSE, lin
         D.write_json("sources.json", out, data_dir=data_dir)
         report.changed.append("sources")
     verified = sum(1 for e in sources.values() if e["status"] == "verified")
-    report.say("- sources: %d of %d figures found on their source pages today; %d links ok, %d blocked to scripts, %d broken"
-               % (verified, len(sources), sum(1 for e in links.values() if e["status"] == "ok"),
-                  sum(1 for e in links.values() if e["status"] == "blocked"),
-                  sum(1 for e in links.values() if e["status"] == "broken")))
+    count = lambda st: sum(1 for e in links.values() if e["status"] == st)  # noqa: E731
+    report.say("- sources: %d of %d figures found on their source pages today; links: %d ok, %d blocked to scripts, "
+               "%d not answering, %d broken" % (verified, len(sources), count("ok"), count("blocked"),
+                                                 count("unreachable"), count("broken")))
     return True
 
 
