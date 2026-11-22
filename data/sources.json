@@ -1,0 +1,536 @@
+{
+ "checked": "2026-11-22",
+ "links": {
+  "https://988lifeline.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://centrepsp.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://cervicalcanceraction.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://cleancooking.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://findahelpline.com": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://gardp.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://haiweb.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://heathealth.info": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://ibasecretariat.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://interburns.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://leadelimination.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://measlesrubellapartnership.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://nest360.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://pivi.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://resolvetosavelives.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://stoppneumonia.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://worldfallsguidelines.com": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.againstmalaria.com": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.ciprb.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.cleanairfund.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.coalitionagainsttyphoid.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.defeatdd.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.evidenceaction.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.fao.org/food-safety/en/": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.globalhep.org": {
+   "checked": "2026-11-22",
+   "http": 403,
+   "status": "blocked"
+  },
+  "https://www.grsproadsafety.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.gtfcc.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.iasp.info/crisis-centres-helplines/": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.maternity.dk": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.missionrabies.com/en": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.pureearth.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.reactgroup.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.sickleinafrica.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.stoprhdwithreach.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.stoptb.org": {
+   "checked": "2026-11-22",
+   "http": 403,
+   "status": "blocked"
+  },
+  "https://www.theglobalfund.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.tobaccofreekids.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.vitalstrategies.org/reset-alcohol/": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.who.int/news/item/09-05-2023-lifesaving-solution-dramatically-reduces-severe-bleeding-after-childbirth": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.worldactiononsalt.com": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  },
+  "https://www.worldhepatitisalliance.org": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "status": "ok"
+  }
+ },
+ "sources": {
+  "alcohol": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2024-06-28",
+   "quote": "around 2.6 million deaths were caused by alcohol consumption in 2019",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/alcohol",
+   "verified": "2026-11-22"
+  },
+  "antimicrobial-resistance": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-07-16",
+   "quote": "associated with more than 4.7 million deaths globally in 2021",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance",
+   "verified": "2026-11-22"
+  },
+  "asbestos": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-08-11",
+   "quote": "more than 200 000 deaths are estimated to be caused by occupational exposure to asbestos",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/asbestos",
+   "verified": "2026-11-22"
+  },
+  "burns": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-10-21",
+   "quote": "an estimated 163 000 people died worldwide from exposure to fire, heat and hot substances",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/burns",
+   "verified": "2026-11-22"
+  },
+  "cervical-cancer": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-11-10",
+   "quote": "around 604 000 new cases and around 280 000 deaths in 2024",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/cervical-cancer",
+   "verified": "2026-11-22"
+  },
+  "child-diarrhoea": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2024-03-07",
+   "quote": "Each year diarrhoea kills around 443 832 children under 5",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease",
+   "verified": "2026-11-22"
+  },
+  "child-pneumonia": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2022-11-11",
+   "quote": "killing 740 180 children in 2019",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/pneumonia",
+   "verified": "2026-11-22"
+  },
+  "cholera": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-09-29",
+   "quote": "21 000 to 143 000 deaths from cholera worldwide each year",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/cholera",
+   "verified": "2026-11-22"
+  },
+  "drowning": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-05-01",
+   "quote": "There are around 300 000 annual drowning deaths worldwide",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/drowning",
+   "verified": "2026-11-22"
+  },
+  "excess-sodium": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-05-11",
+   "quote": "1.7 million deaths each year were associated with consuming too much sodium",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/sodium-reduction",
+   "verified": "2026-11-22"
+  },
+  "extreme-heat": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-07-31",
+   "quote": "approximately 489 000 heat-related deaths occur each year",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health",
+   "verified": "2026-11-22"
+  },
+  "falls": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-10-21",
+   "quote": "approximately 842 000 deaths from falls worldwide",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/falls",
+   "verified": "2026-11-22"
+  },
+  "hepatitis-b": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-07-28",
+   "quote": "In 2024, hepatitis B resulted in an estimated 1.1 million deaths",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+   "verified": "2026-11-22"
+  },
+  "hepatitis-c": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-07-28",
+   "quote": "approximately 239 000 people died from hepatitis C",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-c",
+   "verified": "2026-11-22"
+  },
+  "hiv": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-07-27",
+   "quote": "In 2025, an estimated 570 000 people died from HIV-related causes",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+   "verified": "2026-11-22"
+  },
+  "household-air-pollution": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2025-12-16",
+   "quote": "responsible for an estimated 2.9 million deaths per year in 2021",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
+   "verified": "2026-11-22"
+  },
+  "lead-exposure": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-06-10",
+   "quote": "Lead exposure was attributed to more than 3.5 million deaths globally in 2023",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health",
+   "verified": "2026-11-22"
+  },
+  "malaria": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2025-12-04",
+   "quote": "282 million malaria cases and 610 000 malaria deaths in 80 countries",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+   "verified": "2026-11-22"
+  },
+  "maternal-deaths": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2025-04-07",
+   "quote": "About 260 000 women died during and following pregnancy and childbirth in 2023",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality",
+   "verified": "2026-11-22"
+  },
+  "measles": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-07-15",
+   "quote": "there were an estimated 95 000 measles deaths globally",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/measles",
+   "verified": "2026-11-22"
+  },
+  "newborn-deaths": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2024-03-14",
+   "quote": "Globally 2.3 million children died in the first 28 days of life in 2022",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/newborn-mortality",
+   "verified": "2026-11-22"
+  },
+  "outdoor-air-pollution": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2024-10-24",
+   "quote": "estimated to have caused 4.2 million premature deaths worldwide in 2019",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+   "verified": "2026-11-22"
+  },
+  "rabies": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-09-17",
+   "quote": "rabies causes 44 203 annual deaths",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/rabies",
+   "verified": "2026-11-22"
+  },
+  "rheumatic-heart-disease": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2025-01-24",
+   "quote": "claims approximately 360 000 lives each year",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/rheumatic-heart-disease",
+   "verified": "2026-11-22"
+  },
+  "road-traffic-crashes": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-07-20",
+   "quote": "Approximately 1.16 million people die each year as a result of road traffic crashes",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries",
+   "verified": "2026-11-22"
+  },
+  "seasonal-influenza": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2025-02-28",
+   "quote": "It causes 290 000 to 650 000 respiratory deaths annually",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+   "verified": "2026-11-22"
+  },
+  "shark-attacks": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "",
+   "quote": "There were 12 confirmed shark-related fatalities this year",
+   "status": "verified",
+   "url": "https://www.floridamuseum.ufl.edu/shark-attacks/yearly-worldwide-summary/",
+   "verified": "2026-11-22"
+  },
+  "sickle-cell-disease": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2025-08-06",
+   "quote": "376 000 vs 34 400 deaths in 2021",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/sickle-cell-disease",
+   "verified": "2026-11-22"
+  },
+  "snakebite": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-09-17",
+   "quote": "Around 81 410 to 137 880 people die each year because of snake bites",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/snakebite-envenoming",
+   "verified": "2026-11-22"
+  },
+  "suicide": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-11-03",
+   "quote": "More than 740 000 people die due to suicide every year",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/suicide",
+   "verified": "2026-11-22"
+  },
+  "tobacco": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-06-26",
+   "quote": "Tobacco kills more than 7 million people each year",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco",
+   "verified": "2026-11-22"
+  },
+  "trans-fat": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2024-01-24",
+   "quote": "More than 278 000 deaths each year globally can be attributed to intake",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/trans-fat",
+   "verified": "2026-11-22"
+  },
+  "tuberculosis": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-11-12",
+   "quote": "A total of 1.13 million people died from tuberculosis (TB) in 2025",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+   "verified": "2026-11-22"
+  },
+  "typhoid": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2023-03-30",
+   "quote": "110 000 people die from it every year",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+   "verified": "2026-11-22"
+  },
+  "unsafe-food": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-06-04",
+   "quote": "fall ill after eating contaminated food and 1.52 million die every year",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety",
+   "verified": "2026-11-22"
+  },
+  "unsafe-water-sanitation-hygiene": {
+   "checked": "2026-11-22",
+   "http": 200,
+   "page_date": "2026-11-05",
+   "quote": "1.4 million people die each year as a result of inadequate drinking-water, sanitation and hygiene",
+   "status": "verified",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/sanitation",
+   "verified": "2026-11-22"
+  }
+ }
+}

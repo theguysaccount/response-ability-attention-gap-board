@@ -1,0 +1,37 @@
+name: Public commitment
+description: Record the resolution condition from your assignment, in public, under your own GitHub account.
+title: "Commitment: "
+labels: ["commitment"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Write only what you are happy for anyone to read, and nothing personal about anyone else.
+        When the date comes, close this issue as **completed** if the condition came true, or as **not planned** if it did not.
+        The board's public record counts both: https://theguysaccount.github.io/response-ability-attention-gap-board/record/
+  - type: input
+    id: cause
+    attributes:
+      label: Cause
+      description: The assignment the board gave you.
+    validations:
+      required: true
+  - type: textarea
+    id: condition
+    attributes:
+      label: Resolution condition
+      description: One sentence that will be either true or false on the date, and how anyone can check it.
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Resolution date
+      description: YYYY-MM-DD
+      placeholder: "2027-02-20"
+    validations:
+      required: true
+  - type: input
+    id: capabilities
+    attributes:
+      label: Capabilities you declared (optional)

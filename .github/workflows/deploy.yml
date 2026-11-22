@@ -1,0 +1,93 @@
+# Test, build and publish the board to GitHub Pages, check the live site, then tell IndexNow.
+# Runs on pushes to main that touch the site, and when refresh.yml commits new data (it dispatches this workflow).
+# Fails safe: a failed test, invalid data or a failed local end-to-end run stops before deploying, so the last
+# good deploy stays live.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+    paths: ["board/**", "data/**", "site/**", "scripts/**", ".github/workflows/deploy.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+  SITE_REPO: ${{ github.repository }}
+  SITE_INDEXABLE: ${{ vars.SITE_INDEXABLE || 'true' }}
+  GOATCOUNTER_URL: ${{ vars.GOATCOUNTER_URL }}
+  SUPPORT_URL: ${{ vars.SUPPORT_URL }}
+  SUPPORT_LABEL: ${{ vars.SUPPORT_LABEL }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Tests
+        run: |
+          python -m unittest discover -s tests -t .
+          node --test tests/js.test.mjs
+      - name: Build
+        run: python -m board.site
+      - name: Share images
+        run: python scripts/og.py dist
+      - name: Drive the built site in headless Chrome
+        run: scripts/e2e.sh
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+      - uses: actions/upload-artifact@v7
+        with:
+          name: urls
+          path: build/urls.txt
+          retention-days: 7
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: github-pages
+      url: ${{ steps.second.outputs.page_url || steps.first.outputs.page_url }}
+    steps:
+      - id: first
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+      - id: second
+        if: steps.first.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+
+  after-deploy:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: urls
+      - name: Check the live site in headless Chrome
+        run: |
+          for attempt in 1 2 3 4; do
+            scripts/e2e.sh "$SITE_URL/" && exit 0
+            sleep 45
+          done
+          exit 1
+      - name: Tell search engines (IndexNow)
+        run: python3 scripts/indexnow.py urls.txt "$SITE_URL"

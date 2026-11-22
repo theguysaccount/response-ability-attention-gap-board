@@ -1,0 +1,88 @@
+# Weekly (and early each month): pull Wikipedia pageviews for the last 12 complete months, check that every quoted
+# figure is still on its source page and every link answers, and count public commitments. Commit what changed,
+# redeploy, and turn problems that need a person into ops-alert issues.
+# Fails safe: every step keeps the last good data when a source is unreachable; nothing is committed unless the
+# tests pass on the new data. Safe to re-run at any time (a re-run that finds nothing new commits nothing new
+# except the date of the source check).
+name: Refresh
+
+on:
+  schedule:
+    - cron: "47 5 * * 1"    # Mondays 05:47 UTC
+    - cron: "13 7 4 * *"    # the 4th of each month, after Wikimedia publishes the previous month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Refresh pageviews, sources and the public record
+        id: refresh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -m board.refresh all || echo "partial=true" >> "$GITHUB_OUTPUT"
+      - name: Tests against the new data
+        run: |
+          python -m unittest discover -s tests -t .
+          node --test tests/js.test.mjs
+      - name: Commit and redeploy if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add -A data/
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Data refresh $(date -u +%F)"
+          for attempt in 1 2 3; do
+            git pull --rebase --quiet origin main && git push origin HEAD:main && break
+            sleep 10
+          done
+          gh workflow run deploy.yml --ref main
+      - name: Open or close ops-alert issues
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/alerts.py refresh-report.json
+      - name: Fail visibly if a step could not run at all
+        if: steps.refresh.outputs.partial == 'true'
+        run: |
+          echo "::error::A refresh step could not run; the last good data was kept. See the job summary."
+          exit 1
+
+  keepalive:
+    needs: refresh
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Keep scheduled workflows enabled
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: scripts/keepalive.sh

@@ -1,0 +1,22 @@
+name: Correction
+description: A wrong or outdated figure, a broken source, or a better organisation to list.
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Cause or page
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source for the correction
+      description: An https link to the publisher's own page.

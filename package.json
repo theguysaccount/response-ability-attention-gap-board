@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "type": "module",
+  "description": "Marks site/assets/*.js and tests/*.mjs as ES modules for node --test. There are no dependencies."
+}
