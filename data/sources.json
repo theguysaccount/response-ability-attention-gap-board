@@ -63,7 +63,7 @@
   },
   "https://nest360.org": {
    "checked": "2026-11-22",
-   "http": 200,
+   "http": 202,
    "status": "ok"
   },
   "https://pivi.org": {
@@ -175,7 +175,7 @@
    "checked": "2026-11-22",
    "http": 0,
    "since": "2026-11-22",
-   "status": "broken"
+   "status": "unreachable"
   },
   "https://www.theglobalfund.org": {
    "checked": "2026-11-22",
@@ -204,7 +204,7 @@
   },
   "https://www.worldhepatitisalliance.org": {
    "checked": "2026-11-22",
-   "http": 200,
+   "http": 202,
    "status": "ok"
   }
  },
