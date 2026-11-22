@@ -13,3 +13,6 @@
   figure on 12 November 2026, which the source check caught on its first run).
 - **Broken or missing:** nothing known. Not done: analytics (needs a GoatCounter account), custom domain, organisation
   intake paths (need the organisations' consent).
+- **Machines:** the first schedule-triggered runs, on 22 November 2026, passed: `selftest.yml` (run 45045079940) and `refresh.yml`
+  (run 45052314713). The temporary proof schedules that forced them were then removed; the regular schedules in
+  `OPERATIONS.md` remain.
