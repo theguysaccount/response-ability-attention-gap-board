@@ -1,6 +1,6 @@
 # The Attention Gap Board (RESPONSE·ABILITY)
 
-**Live:** https://theguysaccount.github.io/response-ability-attention-gap-board/
+**Live:** https://board.howcouldihelp.com/
 
 Preventable causes of death ranked by how little attention each death gets: annual deaths from the cited source
 (mostly WHO fact sheets) divided into 12 months of English Wikipedia pageviews by human readers. A visitor then

@@ -5,7 +5,9 @@
 2. **Neutral benchmark.** The prototype's October 7 reference row read as ranking victims of a political event (the
    evaluator flagged it). Shark attacks are the classic case of attention far beyond toll, with an authoritative yearly
    count (International Shark Attack File, 12 confirmed deaths in 2025).
-3. **Indexed launch.** No live original exists (howcouldihelp.com is a parking page), so nothing is duplicated.
+3. **Indexed launch.** No live original exists, so nothing is duplicated. When the board was built, howcouldihelp.com
+   showed a parking page; by the domain rollout later on 2026-11-22 it served a separate Volunteer Offer Planner (Vercel),
+   so the board took `board.howcouldihelp.com` and stays indexed, since it does not duplicate the planner.
 4. **Attention = human pageviews, 12 complete months, up to four articles per cause.** `agent=user` drops identified bots;
    summing a few articles avoids penalising causes whose readers are spread across titles. Every article is listed.
 5. **Tolls are copied, quoted and re-checked, never estimated.** A short quoted phrase per figure (≤15 words) lets a job

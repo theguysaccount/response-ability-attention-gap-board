@@ -4,15 +4,16 @@
   pageviews pulled once by hand, the declare → one-assignment flow, nothing stored. It worked; nothing refreshed it.
 - **Now:** a static site on GitHub Pages with 35 causes (34 WHO fact sheets plus the International Shark Attack File for
   the reference row), every toll quoted and re-checked weekly, pageviews pulled by a scheduled job, per-cause pages,
-  method, public record, open data, embed, share cards. Launched indexed: there is no live original (howcouldihelp.com
-  is a Namecheap parking page).
+  method, public record, open data, embed, share cards. Launched indexed: there is no live original. Lives at
+  board.howcouldihelp.com; the apex now serves a separate Volunteer Offer Planner (Vercel), which the board does not
+  duplicate.
 - **Worth reusing:** the scoring function (kept exactly, now mirrored in Python and tested for parity), the refusals and
   the falsifier, the visual language.
 - **Changed on purpose:** the October 7 benchmark is replaced by shark attacks (neutral, famously over-covered); pageviews
   count human readers only over 12 complete months; tolls updated to the current WHO fact sheets (WHO revised the TB
   figure on 12 November 2026, which the source check caught on its first run).
-- **Broken or missing:** nothing known. Not done: analytics (needs a GoatCounter account), custom domain, organisation
-  intake paths (need the organisations' consent).
+- **Broken or missing:** nothing known. Not done: analytics (needs a GoatCounter account), organisation intake paths
+  (need the organisations' consent).
 - **Machines:** the first schedule-triggered runs, on 22 November 2026, passed: `selftest.yml` (run 45045079940) and `refresh.yml`
   (run 45052314713). The temporary proof schedules that forced them were then removed; the regular schedules in
   `OPERATIONS.md` remain.

@@ -1,7 +1,8 @@
 # Launch and distribution
 
-Launched 2026-11-22 at https://theguysaccount.github.io/response-ability-attention-gap-board/, indexed. Machine channels
-only: nothing is posted, emailed or sent by or as a person.
+Launched 2026-11-22, indexed, and moved the same day to https://board.howcouldihelp.com/ (the first address,
+theguysaccount.github.io/response-ability-attention-gap-board/, redirects there). Machine channels only: nothing is
+posted, emailed or sent by or as a person.
 
 ## Channels that run themselves
 
@@ -9,7 +10,7 @@ only: nothing is posted, emailed or sent by or as a person.
 |---|---|
 | Search | The board answers "most neglected causes of death", "preventable deaths ranked", "deaths vs media attention". 35 cause pages answer "how many people die from <cause> each year" and "<cause> deaths per year", each with its own title, description, canonical URL, structured data and a sourced, dated figure. |
 | IndexNow | Every deploy submits every URL (Bing, Yandex, Seznam, Naver). |
-| Account root | `theguysaccount.github.io/robots.txt` lists this sitemap automatically within a day. |
+| robots.txt | `board.howcouldihelp.com/robots.txt` lists the sitemap, and so does the account root (`theguysaccount.github.io/robots.txt`), rebuilt daily. |
 | Share loop | Every cause has a 1200×630 card ("0.0041 Wikipedia views per death"); the assignment's Share button sends the cause page; the native share sheet on phones. |
 | Embed | `/embed/` card with copy-paste code on `/data/`, for blogs and course pages. |
 | Open data | CSV/JSON under CC BY 4.0: citations become links. |
@@ -27,5 +28,6 @@ action, 10 public commitments.
 
 ## Domain
 
-`howcouldihelp.com` (Jack's, at Namecheap) is parked today. The exact DNS records and settings are in OPERATIONS.md
-(Custom domain). Nothing has been changed.
+`board.howcouldihelp.com` since 2026-11-22: one CNAME at Namecheap, added by the domain rollout session. The apex,
+howcouldihelp.com, serves a separate Volunteer Offer Planner (Vercel), untouched. The settings, and how to move or roll
+back, are in OPERATIONS.md ("Custom domain").
